@@ -1,3 +1,5 @@
+const resultNumber = document.getElementById("result-number");
+const errorMessage = document.getElementById("error-message")
 const searchResult = () => {
     const inputField = document.getElementById("input-field");
     const inputFieldText = inputField.value;
@@ -12,12 +14,23 @@ const searchResult = () => {
         .then(res => res.json())
         .then(data => displayLoad(data.docs));
 
+
 }
 const displayLoad = datas => {
+    //    error Message
+    if (datas.length == 0) {
+        errorMessage.style.display = 'block'
 
+        resultNumber.style.display = 'none'
 
-    // search resultNumber
-    const resultNumber = document.getElementById("result-number");
+    }
+    else {
+        errorMessage.style.display = 'none'
+        resultNumber.style.display = 'block'
+    }
+
+    //  search result data number
+
     resultNumber.innerHTML = ` <h2>search result: ${datas.length}</h2>`
 
     // search result details
