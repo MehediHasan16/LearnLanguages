@@ -15,7 +15,7 @@ const searchResult = () => {
 }
 const displayLoad = datas => {
 
-    console.log(datas)
+
     // search resultNumber
     const resultNumber = document.getElementById("result-number");
     resultNumber.innerHTML = ` <h2>search result: ${datas.length}</h2>`
