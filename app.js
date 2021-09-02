@@ -24,7 +24,7 @@ const displayLoad = datas => {
     const resultDetails = document.getElementById("result-details");
     resultDetails.textContent = '';
     datas.forEach(data => {
-        console.log(data)
+
         const div = document.createElement('div')
 
         div.classList.add('col')
